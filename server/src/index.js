@@ -3,7 +3,7 @@ const typeDefs = require('./schema');
 
 const mocks = {
   Query: () => ({
-    tracksFOrHome: () => [...new Array(6)]
+    tracksForHome: () => [...new Array(6)]
   }),
   Track: () => ({
     id: () => 'track_01',
@@ -22,7 +22,7 @@ const mocks = {
   })
 };
 
-const server = new ApolloServer({typeDefs, mocks: true})
+const server = new ApolloServer({typeDefs, mocks})
 
 server.listen().then(() =>{
   console.log(`
